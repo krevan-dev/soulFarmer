@@ -1,0 +1,18 @@
+/* Footer CSS Snippet */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* Footer CSS Snippet */
+
+.clickPic {
+    height: 200px;
+    width: 200px;
+}
