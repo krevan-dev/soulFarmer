@@ -1,3 +1,7 @@
+let souls = 0;
+let clickMult = 1.25;
+let autoMult = 1.5;
+
 let clickUp = {
     scythe: {
         price: 50,
@@ -23,11 +27,6 @@ let autoUp = {
         multiplier: 50,
     }
 };
-
-let souls = 0000;
-let clickMult = 1.25;
-let autoMult = 1.75;
-
 
 function harvest() {
     souls++
