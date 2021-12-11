@@ -28,18 +28,18 @@
         <div class="row">
             <div class="col-6 text-center text-light">
                 <img class="clickPic my-5" src="./assets/skull.png" alt="" srcset="" onclick="harvest()">
-                <h3 class="mb-5"><b>Souls Harvested:</b> <span id="souls">0</span></h3>
             </div>
             <div class="col-6 my-5 text-center text-light">
                 <div class="row card">
-                    <div class="col-12 fs-3 fw-bold">Upgrade Levels</div>
+                    <div class="col-12 fs-3 fw-bold">
+                        <h3 class="my-3"><b>Souls Harvested:</b> <span id="souls">0</span></h3>
+                    </div>
                     <div class="col-12 p-4">
-                        <p>Scythe Multiplier
-                            <span></span><span id="sharpTotal">0</span></p>
-                        <p>Counterweights x<span id="weightTotal">0</span></p>
+                        <p>Scythe Multiplier = +<span id="scytheMult">0</span>/click</p>
+                        <p>Counterweights = +<span id="weightMult">0</span>/click</p>
 
-                        <p>Absorption Aura x<span id="absorbTotal">0</span></p>
-                        <p>Demonic Minions x<span id="minionTotal">0</span></p>
+                        <p>Absorption Aura = +<span id="absorbMult">0</span>/sec</p>
+                        <p>Demonic Minions = +<span id="minionMult">0</span>/sec</p>
                     </div>
                 </div>
             </div>
@@ -52,12 +52,12 @@
                         <p class="text-center fs-3 fw-bold">Click Upgrades</p>
                     </div>
                     <div class="col-12 text-center">
-                        <button class="btn btn-danger m-3" onclick="buyScythe()">Sharpen Scythe - <span
-                                id='sharpPrice'>50</span> souls</button>
+                        <button class="btn btn-danger m-3" onclick="buyClick('scythe')"><span id="scytheTotal">0</span>
+                            Sharpen Scythe - <span id='scythePrice'>50</span> souls</button>
                     </div>
                     <div class="col-12 text-center">
-                        <button class="btn btn-danger m-3" onclick="buyWeight()">Counterweights - <span
-                                id='weightPrice'>100</span>
+                        <button class="btn btn-danger m-3" onclick="buyClick('weight')"><span id="weightTotal">0</span>
+                            Counterweights - <span id='weightPrice'>100</span>
                             souls</button>
                     </div>
                 </div>
@@ -69,12 +69,12 @@
                         <p class="text-center fs-3 fw-bold">Auto Upgrades</p>
                     </div>
                     <div class="col-12 text-center">
-                        <button class="btn btn-danger m-3" onclick="buyAbsorb()">Absorption Aura - <span
-                                id="absorbPrice">150</span> souls</button>
+                        <button class="btn btn-danger m-3" onclick="buyAuto('absorb')"><span id="absorbTotal">0</span>
+                            Absorption Aura - <span id="absorbPrice">150</span> souls</button>
                     </div>
                     <div class="col-12 text-center">
-                        <button class="btn btn-danger m-3" onclick="buyMinion()">Summon Minion - <span
-                                id="minionPrice">1000</span>
+                        <button class="btn btn-danger m-3" onclick="buyAuto('minion')"><span id="minionTotal">0</span>
+                            Summon Minion - <span id="minionPrice">1000</span>
                             souls</button>
                     </div>
                 </div>
