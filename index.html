@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>💀 Soul Farmer 💀</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,27 +13,7 @@
 
 </head>
 
-<style>
-    /* This is for wire framing to see our rows/columns.
-  DON'T FORGET DEBUG CLASS ON BODY TAG */
-    body.debug .container,
-    body.debug .container-fluid {
-        outline: 2px double blue;
-        outline-offset: -2px;
-    }
-
-    body.debug .row {
-        outline: 2px dashed red;
-        outline-offset: -2px;
-    }
-
-    body.debug [class*="col-"] {
-        outline: 2px dotted forestgreen;
-        outline-offset: -3px;
-    }
-</style>
-
-<body class="">
+<body>
     <!-- HEADER -->
     <header class="container">
         <div class="row">
@@ -51,37 +31,51 @@
                 <h3 class="mb-5"><b>Souls Harvested:</b> <span id="souls">0</span></h3>
             </div>
             <div class="col-6 my-5 text-center text-light">
-                <div class="row">
+                <div class="row card">
                     <div class="col-12 fs-3 fw-bold">Upgrade Levels</div>
                     <div class="col-12 p-4">
-                        <p>Scythe Multiplier x<span id="sharpTotal">0</span></p>
+                        <p>Scythe Multiplier
+                            <span></span><span id="sharpTotal">0</span></p>
+                        <p>Counterweights x<span id="weightTotal">0</span></p>
+
                         <p>Absorption Aura x<span id="absorbTotal">0</span></p>
+                        <p>Demonic Minions x<span id="minionTotal">0</span></p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-6 d-flex justify-content-center text-light p-5">
-                <div class="row">
+                <div class="row card m-3">
                     <!-- NOTE Upgrades that affect clicks. -->
-                    <div class="col-12">
+                    <div class="col-12 my-3">
                         <p class="text-center fs-3 fw-bold">Click Upgrades</p>
                     </div>
                     <div class="col-12 text-center">
-                        <button class="btn btn-danger m-3" onclick="buySharpen()">Sharpen Scythe - <span
+                        <button class="btn btn-danger m-3" onclick="buyScythe()">Sharpen Scythe - <span
                                 id='sharpPrice'>50</span> souls</button>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button class="btn btn-danger m-3" onclick="buyWeight()">Counterweights - <span
+                                id='weightPrice'>100</span>
+                            souls</button>
                     </div>
                 </div>
             </div>
             <div class="col-6 d-flex justify-content-center text-light p-5">
-                <div class="row">
+                <div class="row card m-3">
                     <!-- NOTE Upgrades that apply automatically. -->
-                    <div class="col-12">
+                    <div class="col-12 my-3">
                         <p class="text-center fs-3 fw-bold">Auto Upgrades</p>
                     </div>
                     <div class="col-12 text-center">
-                        <button class="btn btn-danger m-3" onclick="buyAbsorb()">Absorb Souls - <span
-                                id="absorbPrice">100</span> souls</button>
+                        <button class="btn btn-danger m-3" onclick="buyAbsorb()">Absorption Aura - <span
+                                id="absorbPrice">150</span> souls</button>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button class="btn btn-danger m-3" onclick="buyMinion()">Summon Minion - <span
+                                id="minionPrice">1000</span>
+                            souls</button>
                     </div>
                 </div>
             </div>
