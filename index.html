@@ -14,16 +14,86 @@
 
 <body>
     <!-- HEADER -->
-    <header class="container">
+    <header class="container-fluid">
         <div class="row">
-            <div class="col-12 p-3 text-center">
+            <div class="col-12 p-3 bg-dark text-center">
                 <h1 class="text-light">💀 Soul Farmer 💀</h1>
             </div>
         </div>
     </header>
 
+
+
     <!-- MAIN BODY -->
-    <main class="container">
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-4">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center text-light p-5">
+                        <div class="row m-3">
+                            <div class="col-12 my-3">
+                                <p class="text-center fs-3 fw-bold">Click Upgrades</p>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button class="btn btn-danger m-3" onclick="buyClick('scythe')"><span
+                                        id="scytheTotal">0</span>
+                                    Sharpen Scythe - <span id='scythePrice'>50</span> souls</button>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button class="btn btn-danger m-3" onclick="buyClick('weight')"><span
+                                        id="weightTotal">0</span>
+                                    Counterweights - <span id='weightPrice'>100</span>
+                                    souls</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex justify-content-center text-light p-5">
+                        <div class="row m-3">
+                            <div class="col-12 my-3">
+                                <p class="text-center fs-3 fw-bold">Auto Upgrades</p>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button class="btn btn-danger m-3" onclick="buyAuto('absorb')"><span
+                                        id="absorbTotal">0</span>
+                                    Absorption Aura - <span id="absorbPrice">150</span> souls</button>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button class="btn btn-danger m-3" onclick="buyAuto('minion')"><span
+                                        id="minionTotal">0</span>
+                                    Summon Minion - <span id="minionPrice">1000</span>
+                                    souls</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="row">
+                    <div class="col-12 fs-3 fw-bold">
+                        <h3 class="my-3 text-center text-light"><b>Souls Harvested:</b> <span id="souls">0</span></h3>
+                    </div>
+                    <div class="col-12 text-center text-light">
+                        <img class="clickPic my-5" src="./assets/skull.png" alt="" srcset="" onclick="harvest()">
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 d-flex align-items-center justify-content-center">
+                <div class="row text-center text-light">
+                    <div class="col-12 p-4">
+                        <p>Scythe Multiplier = +<span id="scytheMult">0</span>/click</p>
+                        <p>Counterweights = +<span id="weightMult">0</span>/click</p>
+                        <p>Absorption Aura = +<span id="absorbMult">0</span>/sec</p>
+                        <p>Demonic Minions = +<span id="minionMult">0</span>/sec</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+    <!-- <main class="container">
         <div class="row">
             <div class="col-md-6 text-center text-light">
                 <img class="clickPic my-5" src="./assets/skull.png" alt="" srcset="" onclick="harvest()">
@@ -45,7 +115,6 @@
         <div class="row">
             <div class="col-md-6 d-flex justify-content-center text-light p-5">
                 <div class="row m-3">
-                    <!-- NOTE Upgrades that affect clicks. -->
                     <div class="col-12 my-3">
                         <p class="text-center fs-3 fw-bold">Click Upgrades</p>
                     </div>
@@ -62,7 +131,6 @@
             </div>
             <div class="col-md-6 d-flex justify-content-center text-light p-5">
                 <div class="row m-3">
-                    <!-- NOTE Upgrades that apply automatically. -->
                     <div class="col-12 my-3">
                         <p class="text-center fs-3 fw-bold">Auto Upgrades</p>
                     </div>
@@ -78,13 +146,13 @@
                 </div>
             </div>
         </div>
-    </main>
+    </main> -->
 
     <!-- FOOTER -->
-    <footer class="container">
+    <footer class="container-fluid">
         <div class="row">
-            <div class="col-12 p-3 text-center">
-                <h1 class="text-light"></h1>
+            <div class="col-12 bg-dark text-center">
+                <h6 class="text-light">Made by Krevan</h6>
             </div>
         </div>
     </footer>
