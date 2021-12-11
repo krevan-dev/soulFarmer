@@ -24,7 +24,7 @@ let autoUp = {
     }
 };
 
-let souls = 5000;
+let souls = 0000;
 let clickMult = 1.25;
 let autoMult = 1.75;
 

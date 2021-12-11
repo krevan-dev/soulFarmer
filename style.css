@@ -13,13 +13,6 @@ main {
 /* Footer CSS Snippet */
 
 .clickPic {
-    height: 200px;
-    width: 200px;
-}
-
-.card {
-    min-height: 200px;
-    width: 500px;
-    background-color: rgba(255, 255, 255, 0.15);
-    border: 1px solid black;
+    height: 300px;
+    width: 300px;
 }
