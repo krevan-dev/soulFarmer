@@ -1,7 +1,6 @@
 let souls = 0;
 let clickMult = 1.25;
 let autoMult = 1.5;
-
 let clickUp = {
     scythe: {
         price: 50,
@@ -14,7 +13,6 @@ let clickUp = {
         multiplier: 5,
     }
 };
-
 let autoUp = {
     absorb: {
         price: 150,
@@ -28,6 +26,7 @@ let autoUp = {
     }
 };
 
+// This function controls the image onClick function.
 function harvest() {
     souls++
     souls += clickUp.scythe.quantity * clickUp.scythe.multiplier
@@ -35,6 +34,7 @@ function harvest() {
     drawSouls()
 };
 
+// This function controls the upgrades having to do with clicks.
 function buyClick(key) {
     if (souls >= clickUp[key].price) {
         clickUp[key].quantity++
@@ -47,6 +47,7 @@ function buyClick(key) {
     document.getElementById(`${key}Mult`).innerText = clickUp[key].multiplier * clickUp[key].quantity
 }
 
+// This function controls the auto clicker upgrades.
 function buyAuto(key) {
     if (souls >= autoUp[key].price) {
         autoUp[key].quantity++
@@ -59,6 +60,29 @@ function buyAuto(key) {
     document.getElementById(`${key}Mult`).innerText = autoUp[key].multiplier * autoUp[key].quantity
 }
 
+// This function is for drawing the currency to the page.
+function drawSouls() {
+    document.getElementById('souls').innerText = souls.toFixed(0)
+}
+
+// This function is controlling the gathering of auto-clicker currencies.
+function collectAutoUpgrades() {
+    souls += autoUp.absorb.quantity * autoUp.absorb.multiplier
+    souls += autoUp.minion.quantity * autoUp.minion.multiplier
+    drawSouls()
+}
+setInterval(collectAutoUpgrades, 1000);
+
+
+drawSouls()
+
+
+
+
+
+
+// This commented out section is my pre-reformat code for upgrades.
+// Kept for reference later.
 // function buyScythe() {
 //     if (souls >= clickUp.scythe.price) {
 //         clickUp.scythe.quantity++
@@ -102,21 +126,3 @@ function buyAuto(key) {
 //     document.getElementById('minionPrice').innerText = autoUp.minion.price.toFixed(0)
 //     document.getElementById('minionTotal').innerText = autoUp.minion.quantity
 // }
-
-function drawSouls() {
-    document.getElementById('souls').innerText = souls.toFixed(0)
-}
-
-function collectAutoUpgrades() {
-    souls += autoUp.absorb.quantity * autoUp.absorb.multiplier
-    souls += autoUp.minion.quantity * autoUp.minion.multiplier
-    drawSouls()
-}
-
-
-
-
-
-
-setInterval(collectAutoUpgrades, 1000);
-drawSouls()
