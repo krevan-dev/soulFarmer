@@ -26,7 +26,7 @@ let autoUp = {
     }
 };
 
-// This function controls the image onClick function.
+// Controls the image onClick function.
 function harvest() {
     souls++
     souls += clickUp.scythe.quantity * clickUp.scythe.multiplier
@@ -34,7 +34,7 @@ function harvest() {
     drawSouls()
 };
 
-// This function controls the upgrades having to do with clicks.
+// Controls the upgrades having to do with clicks.
 function buyClick(key) {
     if (souls >= clickUp[key].price) {
         clickUp[key].quantity++
@@ -47,7 +47,7 @@ function buyClick(key) {
     document.getElementById(`${key}Mult`).innerText = clickUp[key].multiplier * clickUp[key].quantity
 }
 
-// This function controls the auto clicker upgrades.
+// Controls the auto clicker upgrades.
 function buyAuto(key) {
     if (souls >= autoUp[key].price) {
         autoUp[key].quantity++
@@ -60,20 +60,20 @@ function buyAuto(key) {
     document.getElementById(`${key}Mult`).innerText = autoUp[key].multiplier * autoUp[key].quantity
 }
 
-// This function is for drawing the currency to the page.
+// This is for drawing the currency to the page.
 function drawSouls() {
     document.getElementById('souls').innerText = souls.toFixed(0)
 }
 
-// This function is controlling the gathering of auto-clicker currencies.
+// This is controlling the gathering of auto-clicker currencies.
 function collectAutoUpgrades() {
     souls += autoUp.absorb.quantity * autoUp.absorb.multiplier
     souls += autoUp.minion.quantity * autoUp.minion.multiplier
     drawSouls()
 }
+
+
 setInterval(collectAutoUpgrades, 1000);
-
-
 drawSouls()
 
 
@@ -81,7 +81,7 @@ drawSouls()
 
 
 
-// This commented out section is my pre-reformat code for upgrades.
+// This commented out section is my pre-format code for upgrades.
 // Kept for reference later.
 // function buyScythe() {
 //     if (souls >= clickUp.scythe.price) {
