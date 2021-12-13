@@ -17,3 +17,7 @@ main {
     height: 400px;
     width: 400px;
 }
+
+.clickPic:active {
+    transform: scale(.9);
+}
